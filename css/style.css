@@ -470,6 +470,105 @@ footer {
     opacity: 0.6;
 }
 
+/* =============================================
+   Card-of-the-Day widget
+   ============================================= */
+.card-of-day-widget {
+    background: linear-gradient(180deg, var(--bg-deep), var(--bg-base));
+    border-bottom: 1px solid var(--border);
+}
+
+.card-of-day-widget h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cod-loading,
+.cod-error {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 3rem 0;
+    font-style: italic;
+}
+
+.cod-inner {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    background: var(--bg-card);
+    border: 1px solid var(--gold-soft);
+    border-radius: 24px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 40px rgba(244, 208, 63, 0.08);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cod-image {
+    width: 280px;
+    min-width: 280px;
+    border-radius: 16px;
+    border: 2px solid var(--gold-soft);
+    box-shadow: 0 0 32px var(--gold-glow);
+    object-fit: cover;
+}
+
+.cod-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cod-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+}
+
+.cod-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: var(--gold);
+    text-shadow: 0 0 20px var(--gold-glow);
+    margin: 0;
+}
+
+.cod-keywords {
+    font-style: italic;
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    border-left: 2px solid var(--gold-soft);
+    padding-left: 0.75rem;
+}
+
+.cod-interp {
+    color: var(--text-soft);
+    font-size: 0.97rem;
+    line-height: 1.7;
+}
+
+.cod-interp p {
+    margin-bottom: 0.75rem;
+    color: var(--text-soft);
+}
+
+.cod-interp b {
+    color: var(--gold-soft);
+}
+
+.cod-interp p:last-child {
+    margin-bottom: 0;
+}
+
+.cod-btn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     nav ul {
@@ -492,4 +591,23 @@ footer {
     .page-hero { padding: 3rem 0 2rem; }
 
     .btn-group { flex-direction: column; align-items: stretch; }
+
+    /* Card-of-the-Day — mobile */
+    .cod-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .cod-image {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .cod-btn {
+        align-self: stretch;
+        text-align: center;
+        justify-content: center;
+    }
 }
